@@ -11,13 +11,13 @@ db.products.insertMany([
     name: "Shoes",
     description: "Puma Shoes",
     imgUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstore-in.puma.com%2Fpuma-store-delhi-ghitorni-3-sports-apparel-ghitorni-new-delhi-253846%2FProductDetails%2F4099683461969&psig=AOvVaw3Xd_WqtshwOEoPpnNiSv7E&ust=1748610997537000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjz6N7hyI0DFQAAAAAdAAAAABAE",
-    price: 6500
+    price: 6500,
   },
   {
     name: "Verity Book",
     description: "A Novel",
     imgUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.in%2FVERITY-Paperback-Hoover-Colleen%2Fdp%2F1408726602&psig=AOvVaw0MlpfrOOpiCz5jwCOgrSts&ust=1748611034092000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCS3u3hyI0DFQAAAAAdAAAAABAE",
-    price: 250
+    price: 250,
   }
 ]);
 
