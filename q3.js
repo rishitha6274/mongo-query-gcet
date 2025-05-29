@@ -17,7 +17,7 @@ db.products.insertMany([
     name: "Verity Book",
     description: "A Novel",
     imgUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.in%2FVERITY-Paperback-Hoover-Colleen%2Fdp%2F1408726602&psig=AOvVaw0MlpfrOOpiCz5jwCOgrSts&ust=1748611034092000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCS3u3hyI0DFQAAAAAdAAAAABAE",
-    price: 200
+    price: 250
   }
 ]);
 
