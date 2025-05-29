@@ -1,4 +1,4 @@
-db.employees.updateMany(
+db.employees.updateOne(
   { email: "john@gmail.com" },
   { $set: { email: "john@outlook.com" } }
 );
