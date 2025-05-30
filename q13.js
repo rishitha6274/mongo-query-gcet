@@ -21,7 +21,7 @@ db.orders.insertMany([
     empId: ObjectId("6838694ef75ef1d8bcebe297"),
     items: { "2": 3 },
     orderValue: 270,
-    status: "Pending"
+    status: "Cancelled"
   },
   {
     empId: ObjectId("68386d58f75ef1d8bcebe298"),
@@ -45,4 +45,16 @@ db.orders.aggregate([
       as: "empOrderDetails"
     }
   },
+  {
+    $unwind: "$empOrderDetails"
+  },
+  {
+    $project: {
+      name: "$empOrderDetails.name",        
+      email: "$empOrderDetails.email",      
+      orderValue: 1,
+      items: 1,
+      status: 1
+    }
+  }
 ]);
