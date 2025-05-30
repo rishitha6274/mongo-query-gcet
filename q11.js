@@ -13,8 +13,6 @@ db.employees.aggregate([
   {
     $project: {
       name: 1,
-      email: 1,
-      salary: 1,
       annualSalary: { $multiply: ["$salary", 12] }
     }
   }
