@@ -45,16 +45,4 @@ db.orders.aggregate([
       as: "empOrderDetails"
     }
   },
-  {
-    $unwind: "$empOrderDetails"
-  },
-  {
-    $project: {
-      name: "$empOrderDetails.name",        
-      email: "$empOrderDetails.email",      
-      orderValue: 1,
-      items: 1,
-      status: 1
-    }
-  }
 ]);
