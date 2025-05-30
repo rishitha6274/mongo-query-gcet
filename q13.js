@@ -21,7 +21,7 @@ db.orders.insertMany([
     empId: ObjectId("6838694ef75ef1d8bcebe297"),
     items: { "2": 3 },
     orderValue: 270,
-    status: "Cancelled"
+    status: "Pending"
   },
   {
     empId: ObjectId("68386d58f75ef1d8bcebe298"),
