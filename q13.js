@@ -42,16 +42,16 @@ db.orders.aggregate([
       from: "employees",           
       localField: "empId",         
       foreignField: "_id",        
-      as: "employeeOrderDetails"
+      as: "empOrderDetails"
     }
   },
   {
-    $unwind: "$employeeOrderDetails"
+    $unwind: "$empOrderDetails"
   },
   {
     $project: {
-      name: "$employeeOrderDetails.name",        
-      email: "$employeeOrderDetails.email",      
+      name: "$empOrderDetails.name",        
+      email: "$empOrderDetails.email",      
       orderValue: 1,
       items: 1,
       status: 1
