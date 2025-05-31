@@ -1,19 +1,22 @@
-db.employees.aggregate([
+db.orders.aggregate([
   {
     $lookup: {
-      from: "orders",
-      localField: "empId",     
-      foreignField: "empId",    
-      as: "orders"
+      from: "employees",           
+      localField: "empId",         
+      foreignField: "_id",        
+      as: "empOrderDetails"
     }
   },
   {
-    $unwind: "$orders"
+    $unwind: "$empOrderDetails"
   },
   {
     $group: {
-      _id: { empId: "$empId", name: "$name", email: "$email" },
-      totalOrderValue: { $sum: "$orders.orderValue" }
+      _id: {
+        name: "$empOrderDetails.name",
+        email: "$empOrderDetails.email"
+      },
+      totalOrderValue: { $sum: "$orderValue" }
     }
   },
   {
